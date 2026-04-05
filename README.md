@@ -1,11 +1,13 @@
 # PSP ME Benchmark
 
+[English](README_EN.md)
+
 世界初のPSP Media Engineデュアルベンチマーク。
 シングルCPU vs デュアルCPU（ME並列）× クロック（222/333MHz）の4パターンで3種のベンチマークを実行し、MEによる実効性能向上を定量的に計測する。
 
 ## スクリーンショット
 
-（結果画面のスクリーンショットをここに貼る）
+![ベンチマーク結果](screenshot.png)
 
 ## ベンチマーク結果
 
