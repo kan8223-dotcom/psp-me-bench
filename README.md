@@ -114,4 +114,4 @@ Tiny-MEライブラリ (`tiny-me/`) は [MIT License](tiny-me/LICENSE.md) (c) 20
 ## クレジット
 
 - [Tiny-ME](https://github.com/pspdev/tiny-me) — PSP Media Engine Core Mapper Library by m-c/d
-- PSPDev toolchain & community
+- [PSPDev toolchain](https://github.com/pspdev/pspdev)

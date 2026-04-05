@@ -111,4 +111,4 @@ The Tiny-ME library (`tiny-me/`) is licensed under the [MIT License](tiny-me/LIC
 ## Credits
 
 - [Tiny-ME](https://github.com/mcidclan/tiny-me) — PSP Media Engine Core Mapper Library by m-c/d
-- PSPDev toolchain & community
+- [PSPDev toolchain](https://github.com/pspdev/pspdev)
