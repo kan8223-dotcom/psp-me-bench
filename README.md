@@ -52,9 +52,11 @@ DUAL時は計算範囲を半分に分割し、メインCPU（SC）とMEで並列
 
 ### 手順
 
+リポジトリにビルド済みバイナリ（`EBOOT.PBP`、`tiny-me/build/kernel/kcall.prx`）が含まれているため、ビルド環境なしでそのまま使用できます。
+
 1. **kcall.prxの配置**
 
-   `kcall.prx` をメモリースティックにコピー:
+   `tiny-me/build/kernel/kcall.prx` をメモリースティックにコピー:
    ```
    ms0:/seplugins/kcall.prx
    ```
@@ -78,9 +80,6 @@ DUAL時は計算範囲を半分に分割し、メインCPU（SC）とMEで並列
 5. **CFWのクロック設定を「デフォルト」にする**（333MHz固定だとクロック変更APIが無視される）
 
 6. **XMBからME Benchmarkを起動** → △で全自動実行
-
-### kcall.prxについて
-kcall.prxはTiny-MEライブラリがMedia Engineにアクセスするために必要なカーネルモードプラグインです。`tiny-me/build/kernel/kcall.prx` にビルド済みバイナリが含まれています。
 
 ## ビルド
 

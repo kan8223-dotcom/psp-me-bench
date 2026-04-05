@@ -50,11 +50,12 @@ In DUAL mode, the workload is split in half between the main CPU (SC) and the Me
 
 ### Instructions
 
-1. **Copy kcall.prx** to your Memory Stick:
+Pre-built binaries (`EBOOT.PBP` and `tiny-me/build/kernel/kcall.prx`) are included in the repository. No build environment required.
+
+1. **Copy kcall.prx** from `tiny-me/build/kernel/kcall.prx` to your Memory Stick:
    ```
    ms0:/seplugins/kcall.prx
    ```
-   A pre-built binary is included at `tiny-me/build/kernel/kcall.prx`.
 
 2. **Register the seplugin**
 
