@@ -9,6 +9,8 @@ Measures real-world performance gains from the ME by running 3 benchmarks across
 
 ## Results
 
+*SC = System CPU (a convenient label used in this project). Refers to the PSP's main CPU (Allegrex), used to distinguish it from the ME.
+
 Speedup relative to SC 222MHz (identical on PSP-1000 and PSP-3000):
 
 | Bench | SC 222 | DUAL 222 | SC 333 | DUAL 333 |
@@ -104,9 +106,11 @@ This produces `EBOOT.PBP`.
 
 ## License
 
-This project is licensed under [GPL-3.0](LICENSE).
+Copyright (C) 2026 kan8223
 
-The Tiny-ME library (`tiny-me/`) is licensed under the [MIT License](tiny-me/LICENSE.md) (c) 2025 m-c/d.
+This project is licensed under GPL-3.0.
+
+The Tiny-ME library (tiny-me/) is licensed under the MIT License (c) 2025 m-c/d.
 
 ## Credits
 
