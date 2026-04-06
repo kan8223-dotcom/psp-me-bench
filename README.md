@@ -107,9 +107,12 @@ make
 
 ## ライセンス
 
-本プロジェクトは [GPL-3.0](LICENSE) でライセンスされています。
+Copyright (C) 2026 kan8223
 
-Tiny-MEライブラリ (`tiny-me/`) は [MIT License](tiny-me/LICENSE.md) (c) 2025 m-c/d でライセンスされています。
+本プロジェクトは GPL-3.0 でライセンスされています。
+
+Tiny-MEライブラリ (tiny-me/) は MIT License (c) 2025 m-c/d でライセンスされています。
+
 
 ## クレジット
 
