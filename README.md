@@ -10,7 +10,7 @@
 ![ベンチマーク結果](screenshot.png)
 
 ## ベンチマーク結果
-
+※SC = System CPU（本記事での便宜的な呼称）。PSPのメインCPU（Allegrex）を指します。MEと区別するために使用しています。
 SC 222MHz基準の倍率（PSP-1000 / PSP-3000 共通）:
 
 | ベンチ | SC 222 | DUAL 222 | SC 333 | DUAL 333 |
