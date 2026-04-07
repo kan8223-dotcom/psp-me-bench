@@ -13,7 +13,7 @@
 #include <string.h>
 #include <math.h>
 #include <pspsdk.h>
-#include <me-core-mapper/me-core.h>
+#include "me-core.h"
 
 /* PSP newlib stub */
 int ftruncate(int fd, off_t length) { (void)fd; (void)length; return -1; }

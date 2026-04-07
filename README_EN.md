@@ -52,16 +52,30 @@ In DUAL mode, the workload is split in half between the main CPU (SC) and the Me
 
 ### Instructions
 
-1. **Copy EBOOT.PBP** to your Memory Stick:
+Pre-built binaries (`EBOOT.PBP` and `tiny-me/build/kernel/kcall.prx`) are included in the repository. No build environment required.
+
+1. **Copy kcall.prx** from `tiny-me/build/kernel/kcall.prx` to your Memory Stick:
+   ```
+   ms0:/seplugins/kcall.prx
+   ```
+
+2. **Register the seplugin**
+
+   Create or append to `ms0:/seplugins/game.txt`:
+   ```
+   ms0:/seplugins/kcall.prx 1
+   ```
+
+3. **Copy EBOOT.PBP** to your Memory Stick:
    ```
    ms0:/PSP/GAME/MEBENCH/EBOOT.PBP
    ```
 
-2. **Set CFW clock to "Default"** (setting it to 333MHz fixed causes the clock API to be ignored)
+4. **Reboot your PSP** (required for kcall.prx to load)
 
-3. **Launch ME Benchmark from XMB** → press △ to run all benchmarks
+5. **Set CFW clock to "Default"** (setting it to 333MHz fixed causes the clock API to be ignored)
 
-note: do not use kcall.prx as a plugin; the library will automatically generate and load it.
+6. **Launch ME Benchmark from XMB** → press △ to run all benchmarks
 
 ### About kcall.prx
 kcall.prx is a kernel-mode plugin required by the Tiny-ME library to access the Media Engine. Both PSP-1000 and PSP-3000 require this plugin to be installed.
@@ -72,15 +86,6 @@ kcall.prx is a kernel-mode plugin required by the Tiny-ME library to access the 
 - [PSPDEV toolchain](https://github.com/pspdev/pspdev)
 
 ### Build
-```
-git clone https://github.com/mcidclan/psp-media-engine-custom-core
-cd psp-media-engine-custom-core
-mkdir build
-cd build
-cmake ..
-make install;
-```
-
 ```bash
 make clean
 make
@@ -105,9 +110,9 @@ Copyright (C) 2026 kan8223
 
 This project is licensed under GPL-3.0.
 
-The ME Custom Core library is licensed under the MIT License (c) 2025 m-c/d.
+The Tiny-ME library (tiny-me/) is licensed under the MIT License (c) 2025 m-c/d.
 
 ## Credits
 
-- [ME Custom Core](https://github.com/mcidclan/psp-media-engine-custom-core) — PSP Media Engine Core Mapper Library by m-c/d
+- [Tiny-ME](https://github.com/mcidclan/psp-media-engine-custom-core) — PSP Media Engine Core Mapper Library by m-c/d
 - [PSPDev toolchain](https://github.com/pspdev/pspdev)
