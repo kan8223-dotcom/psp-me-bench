@@ -2,7 +2,7 @@
 
 ## テスト環境
 - PSP-1000 / PSP-3000 (CFW, kcall.prx seplugin)
-- Tiny-ME (meLibDefaultInit)
+- MECC (meLibDefaultInit)
 - ベンチマーク: PI (ライプニッツ級数 100万項), PRIME (試行除算 10万), MANDEL (160x120 iter64)
 - タイマー: sceKernelGetSystemTimeLow() (1MHz HWレジスタ, クロック非依存)
 
@@ -67,7 +67,7 @@
 
 ## PSP-3000 ME対応メモ
 - kcall.prxをms0:/seplugins/に配置、game.txtに `ms0:/seplugins/kcall.prx 1` 追加で動作
-- Tiny-MEのwitness word判定でT2テーブル(me_init_ret=2)が自動選択される
+- MECCのwitness word判定でT2テーブル(me_init_ret=2)が自動選択される
 - PSP-1000はFATテーブル(me_init_ret=3)
 
 ## アプリ機能

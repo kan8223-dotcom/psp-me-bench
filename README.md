@@ -2,11 +2,8 @@
 
 [English](README_EN.md)
 
-> **注記**: 本リポジトリは現在、古い seplugin 方式での kcall.prx
-> ロードを使用しています。現在の推奨方式は meLibLoadPrx() による
-> auto-load (seplugin 設定不要) です。動作例は
-> [psp-pmdvis](https://github.com/kan8223-dotcom/psp-pmdvis) を
-> 参照してください。
+> **注記**: kcall.prx は MECC ライブラリが自動生成・ロードします。
+> seplugin としての手動配置は不要です。
 
 世界初のPSP Media Engineデュアルベンチマーク。
 シングルCPU vs デュアルCPU（ME並列）× クロック（222/333MHz）の4パターンで3種のベンチマークを実行し、MEによる実効性能向上を定量的に計測する。
@@ -58,34 +55,21 @@ DUAL時は計算範囲を半分に分割し、メインCPU（SC）とMEで並列
 
 ### 手順
 
-リポジトリにビルド済みバイナリ（`EBOOT.PBP`、`tiny-me/build/kernel/kcall.prx`）が含まれているため、ビルド環境なしでそのまま使用できます。
-
-1. **kcall.prxの配置**
-
-   `tiny-me/build/kernel/kcall.prx` をメモリースティックにコピー:
-   ```
-   ms0:/seplugins/kcall.prx
-   ```
-
-2. **sepluginの登録**
-
-   `ms0:/seplugins/game.txt` を作成（または追記）:
-   ```
-   ms0:/seplugins/kcall.prx 1
-   ```
-
-3. **EBOOTの配置**
+1. **EBOOTの配置**
 
    `EBOOT.PBP` をメモリースティックにコピー:
    ```
    ms0:/PSP/GAME/MEBENCH/EBOOT.PBP
    ```
 
-4. **PSPを再起動**（kcall.prxの読み込みに必要）
+2. **CFWのクロック設定を「デフォルト」にする**（333MHz固定だとクロック変更APIが無視される）
 
-5. **CFWのクロック設定を「デフォルト」にする**（333MHz固定だとクロック変更APIが無視される）
+3. **XMBからME Benchmarkを起動** → △で全自動実行
 
-6. **XMBからME Benchmarkを起動** → △で全自動実行
+注: kcall.prxをsepluginとして使用しないでください。ライブラリが自動生成・ロードします。
+
+### kcall.prxについて
+kcall.prxはMECCライブラリがMedia Engineにアクセスするために必要なカーネルモードモジュールです。PSP-1000/PSP-3000いずれも必要です。
 
 ## ビルド
 
@@ -93,6 +77,15 @@ DUAL時は計算範囲を半分に分割し、メインCPU（SC）とMEで並列
 - [PSPDEV toolchain](https://github.com/pspdev/pspdev)
 
 ### ビルド手順
+```bash
+git clone https://github.com/mcidclan/psp-media-engine-custom-core
+cd psp-media-engine-custom-core
+mkdir build
+cd build
+cmake ..
+make install;
+```
+
 ```bash
 make clean
 make
@@ -117,7 +110,7 @@ Copyright (C) 2026 kan8223
 
 本プロジェクトは GPL-3.0 でライセンスされています。
 
-MECCライブラリ (tiny-me/) は MIT License (c) 2025 m-c/d でライセンスされています。
+MECCライブラリ (`mecc/`) は MIT License (c) 2025 m-c/d でライセンスされています。
 
 
 ## クレジット
