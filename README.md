@@ -2,6 +2,12 @@
 
 [English](README_EN.md)
 
+> **注記**: 本リポジトリは現在、古い seplugin 方式での kcall.prx
+> ロードを使用しています。現在の推奨方式は meLibLoadPrx() による
+> auto-load (seplugin 設定不要) です。動作例は
+> [psp-pmdvis](https://github.com/kan8223-dotcom/psp-pmdvis) を
+> 参照してください。
+
 世界初のPSP Media Engineデュアルベンチマーク。
 シングルCPU vs デュアルCPU（ME並列）× クロック（222/333MHz）の4パターンで3種のベンチマークを実行し、MEによる実効性能向上を定量的に計測する。
 
@@ -111,10 +117,10 @@ Copyright (C) 2026 kan8223
 
 本プロジェクトは GPL-3.0 でライセンスされています。
 
-Tiny-MEライブラリ (tiny-me/) は MIT License (c) 2025 m-c/d でライセンスされています。
+MECCライブラリ (tiny-me/) は MIT License (c) 2025 m-c/d でライセンスされています。
 
 
 ## クレジット
 
-- [Tiny-ME](https://github.com/mcidclan/psp-media-engine-custom-core) — PSP Media Engine Core Mapper Library by m-c/d
+- [MECC](https://github.com/mcidclan/psp-media-engine-custom-core) — PSP Media Engine Core Mapper Library by m-c/d
 - [PSPDev toolchain](https://github.com/pspdev/pspdev)

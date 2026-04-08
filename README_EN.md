@@ -1,5 +1,11 @@
 # PSP ME Benchmark
 
+> **Note**: This repository currently uses the legacy seplugin approach
+> for loading kcall.prx. The recommended approach is now auto-load via
+> meLibLoadPrx() (no seplugin setup required). See
+> [psp-pmdvis](https://github.com/kan8223-dotcom/psp-pmdvis) for a
+> working example.
+
 The world's first PSP Media Engine dual benchmark.
 Measures real-world performance gains from the ME by running 3 benchmarks across 4 patterns: Single CPU vs Dual CPU (ME parallel) × Clock speed (222/333MHz).
 
@@ -64,7 +70,7 @@ In DUAL mode, the workload is split in half between the main CPU (SC) and the Me
 note: do not use kcall.prx as a plugin; the library will automatically generate and load it.
 
 ### About kcall.prx
-kcall.prx is a kernel-mode plugin required by the Tiny-ME library to access the Media Engine. Both PSP-1000 and PSP-3000 require this plugin to be installed.
+kcall.prx is a kernel-mode plugin required by the MECC library to access the Media Engine. Both PSP-1000 and PSP-3000 require this plugin to be installed.
 
 ## Building
 
